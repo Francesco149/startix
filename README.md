@@ -9,7 +9,7 @@ don't blame me if it nukes your data
 * boot into a live artix iso or any linux install that has pacman configured with artix repos and
   the arch bootstrap tools
 * login with username root, password artix
-* `curl -sSLO https://github.com/Francesco149/startix/startix.sh && sh ./startix.sh`
+* `curl -sSLO https://raw.githubusercontent.com/Francesco149/startix/master/startix.sh && sh ./startix.sh`
 * follow instructions
 
 you can also install from a different machine than the target, and it should work fine with EFI.

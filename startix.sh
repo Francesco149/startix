@@ -27,7 +27,7 @@ drives() {
 }
 
 if ! mount | grep -q /mnt/artix; then
-  defaultdrive="$(drives | sed '/\/usb-/d;1q')"
+  defaultdrive="$(drives | sed '/\/usb-/d;/DVD/d;1q')"
   echo "################################################################################"
   drives
   echo "################################################################################"

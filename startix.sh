@@ -421,8 +421,6 @@ export SVDIR="$HOME/.config/service"
 # If not running interactively, don't do anything else
 [[ $- != *i* ]] && return
 
-source /usr/share/nnn/quitcd/quitcd.bash_zsh
-
 set -o vi
 bind '"\e[24~":"\C-un\n"'
 

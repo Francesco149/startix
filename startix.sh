@@ -245,25 +245,25 @@ Include = /etc/pacman.d/mirrorlist
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 
-# arch linux repos
+# arch linux repos (disabled by default, add arch mirror list to enable)
 
-#[testing]
+##[testing]
+##Include = /etc/pacman.d/mirrorlist-arch
+#
+#[extra]
 #Include = /etc/pacman.d/mirrorlist-arch
-
-[extra]
-Include = /etc/pacman.d/mirrorlist-arch
-
-#[community-testing]
+#
+##[community-testing]
+##Include = /etc/pacman.d/mirrorlist-arch
+#
+#[community]
 #Include = /etc/pacman.d/mirrorlist-arch
-
-[community]
-Include = /etc/pacman.d/mirrorlist-arch
-
-#[multilib-testing]
+#
+##[multilib-testing]
+##Include = /etc/pacman.d/mirrorlist-arch
+#
+#[multilib]
 #Include = /etc/pacman.d/mirrorlist-arch
-
-[multilib]
-Include = /etc/pacman.d/mirrorlist-arch
 EOF
   curl 'https://aur.archlinux.org/cgit/aur.git/plain/mirrorlist?h=chaotic-mirrorlist' \
     > /mnt/artix/etc/pacman.d/chaotic-mirrorlist &&

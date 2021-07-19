@@ -94,7 +94,7 @@ chaotic_multilib_packages() {
 aur_packages() {
   pac -Rdd libxft
   tri -S transset-df nodm-runit apulse adwaita-dark ttf-hack-ligatured xboxdrv-runit \
-    libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slot-git xdotool-git \
+    libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slop-git xdotool-git \
     nodm-dgw sxiv-git \
     || return
 }

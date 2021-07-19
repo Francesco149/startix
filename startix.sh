@@ -82,7 +82,7 @@ base_packages() {
   bs nfs-utils gvim xorg-server git xorg-xinit xorg-xset xterm vi openssh \
     openssh-runit wpa_supplicant dhcpcd picom nnn qt5ct grub os-prober curl sv-helper\
     noto-fonts noto-fonts-cjk noto-fonts-emoji dunst networkmanager networkmanager-runit \
-    man man-pages adwaita-icon-theme clipit \
+    man man-pages adwaita-icon-theme clipit pass \
     || return
 }
 chaotic_multilib_packages() {

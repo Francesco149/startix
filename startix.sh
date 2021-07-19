@@ -94,7 +94,7 @@ chaotic_multilib_packages() {
 aur_packages() {
   pac -Rdd libxft
   tri -S transset-df nodm-runit apulse adwaita-dark ttf-hack-ligatured xboxdrv-runit \
-    libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slop-git xdotool-git \
+    libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slop-git \
     nodm-dgw sxiv-git \
     || return
 }
@@ -245,26 +245,6 @@ Include = /etc/pacman.d/mirrorlist
 
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
-
-# arch linux repos (disabled by default, add arch mirror list to enable)
-
-##[testing]
-##Include = /etc/pacman.d/mirrorlist-arch
-#
-#[extra]
-#Include = /etc/pacman.d/mirrorlist-arch
-#
-##[community-testing]
-##Include = /etc/pacman.d/mirrorlist-arch
-#
-#[community]
-#Include = /etc/pacman.d/mirrorlist-arch
-#
-##[multilib-testing]
-##Include = /etc/pacman.d/mirrorlist-arch
-#
-#[multilib]
-#Include = /etc/pacman.d/mirrorlist-arch
 EOF
   curl 'https://aur.archlinux.org/cgit/aur.git/plain/mirrorlist?h=chaotic-mirrorlist' \
     > /mnt/artix/etc/pacman.d/chaotic-mirrorlist &&

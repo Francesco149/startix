@@ -72,10 +72,11 @@ if ! mount | grep -q /mnt/artix; then
 fi
 
 base_packages() {
-  [ "$ARTIX_CACHE" ] &&
+  if [ "$ARTIX_CACHE" ]; then
     command -v rsync &&
     echo "copying cache" &&
     rsync -rv "$ARTIX_CACHE/" /mnt/artix/ || return
+  fi
   bs base base-devel runit elogind-runit || return
   bs linux-firmware linux linux-headers || return
   bs nfs-utils gvim xorg-server nodm git xorg-xinit xorg-xset xterm nitrogen parcellite vi openssh \

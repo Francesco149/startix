@@ -94,7 +94,7 @@ chaotic_multilib_packages() {
 aur_packages() {
   pac -Rdd libxft
   tri -S transset-df nodm-runit apulse adwaita-dark ttf-hack-ligatured xboxdrv-runit \
-    libxft-bgra-git ttf-scientifica ufetch-git || return
+    libxft-bgra-git ttf-scientifica || return
 }
 
 if ! isbios && ! mount | grep '/mnt/artix/efi type vfat'; then

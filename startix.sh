@@ -113,7 +113,7 @@ if ! isbios && ! mount | grep '/mnt/artix/efi type vfat'; then
 fi
 
 cr() {
-  artools-chroot /mnt/artix "$@"
+  artix-chroot /mnt/artix "$@"
 }
 
 bs() {
@@ -282,7 +282,7 @@ bootloader yourself.
 
 please install the boot loader by running:
 
-  artools-chroot /mnt/artix grub-install --target=i386-pc --recheck /dev/sdX
+  artix-chroot /mnt/artix grub-install --target=i386-pc --recheck /dev/sdX
 
 where sdX is the disk you are installing to
 
@@ -672,7 +672,7 @@ last_step
 
 echo "
 * you can chroot into the install to make any final adjustments with
-  artools-chroot /mnt/artix
+  artix-chroot /mnt/artix
 
 * the detected timezone is $(readlink /mnt/artix/etc/localtime) . if that's not correct, change it
   by running this from inside the chroot:

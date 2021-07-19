@@ -395,7 +395,7 @@ export GTK2_RC_FILE="$HOME/.config/gtk-2.0/gtkrc-2.0"
 export _JAVA_AWT_WM_NONREPARENTING=1 # for ghidra and other shitty java uis
 export MANGOHUD=1
 export EDITOR=vim
-export BROWSER=brave
+export BROWSER=firefox
 export TERMINAL=uxterm
 export WINEPREFIX="$HOME/.cache/wine"
 
@@ -562,7 +562,7 @@ EOF
   icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
   sticky_history = yes
   history_length = 10000
-  browser = /usr/bin/brave
+  browser = /usr/bin/firefox
   always_run_script = true
   title = Dunst
   class = Dunst

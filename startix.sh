@@ -661,9 +661,10 @@ unmanaged() {
 do_step unmanaged
 
 makepkg_march() {
-  sed -i "
-    s/^C\(XX\)\{0,1\}FLAGS=.*/C\1FLAGS=\"-flto -march=native -mtune=native -O2 -pipe -fno-plt\"/;
-  " /mnt/artix/etc/makepkg.conf
+  echo 'CFLAGS="-flto -march=native -mtune=native -O2 -pipe -fno-plt"' \
+    >> /mnt/artix/etc/makepkg.conf
+  echo 'CXXFLAGS="-flto -march=native -mtune=native -O2 -pipe -fno-plt"' \
+    >> /mnt/artix/etc/makepkg.conf
 }
 do_step makepkg_march
 
@@ -688,6 +689,8 @@ echo "
 * sshd is enabled by default, remove /mnt/artix/etc/runit/runsvdir/default/sshd to disable it
 * spectre/meltdown mitigations are disabled for performance, edit /mnt/artix/etc/default/grub to
   re-enable them if you wish
+* there are CFLAGS and CXXFLAGS overrides at the end of your /etc/makepkg.conf . so changing the
+  top ones will not do anything
 
 if you are making this install for a different machine that uses BIOS and it doesn't boot, you will
 need to boot a live iso on the target machine, mount and chroot into the install and do

@@ -79,10 +79,10 @@ base_packages() {
   fi
   bs base base-devel runit elogind-runit || return
   bs linux-firmware linux linux-headers || return
-  bs nfs-utils gvim xorg-server nodm git xorg-xinit xorg-xset xterm nitrogen parcellite vi openssh \
+  bs nfs-utils gvim xorg-server git xorg-xinit xorg-xset xterm vi openssh \
     openssh-runit wpa_supplicant dhcpcd picom nnn sxiv qt5ct grub os-prober curl sv-helper\
-    noto-fonts noto-fonts-cjk noto-fonts-emoji dunst networkmanager networkmanager-runit maim \
-    man-pages adwaita-icon-theme \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji dunst networkmanager networkmanager-runit \
+    man-pages adwaita-icon-theme clipit \
     || return
 }
 chaotic_multilib_packages() {
@@ -94,7 +94,9 @@ chaotic_multilib_packages() {
 aur_packages() {
   pac -Rdd libxft
   tri -S transset-df nodm-runit apulse adwaita-dark ttf-hack-ligatured xboxdrv-runit \
-    libxft-bgra-git ttf-scientifica || return
+    libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slot-git xdotool-git \
+    nodm-dgw \
+    || return
 }
 
 if ! isbios && ! mount | grep '/mnt/artix/efi type vfat'; then
@@ -401,7 +403,7 @@ xset m 0 0                        # no mouse accel
 xset r rate 200 60                # keyboard repeat rate
 xset s off -dpms                  # no display blanking
 picom &
-parcellite &
+clipit &
 dunst &
 nitrogen --restore
 xrdb ~/.Xresources

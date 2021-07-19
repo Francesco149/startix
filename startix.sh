@@ -80,7 +80,7 @@ base_packages() {
   bs base base-devel runit elogind-runit || return
   bs linux-firmware linux linux-headers || return
   bs nfs-utils gvim xorg-server git xorg-xinit xorg-xset xterm vi openssh \
-    openssh-runit wpa_supplicant dhcpcd picom nnn sxiv qt5ct grub os-prober curl sv-helper\
+    openssh-runit wpa_supplicant dhcpcd picom nnn qt5ct grub os-prober curl sv-helper\
     noto-fonts noto-fonts-cjk noto-fonts-emoji dunst networkmanager networkmanager-runit \
     man-pages adwaita-icon-theme clipit \
     || return
@@ -95,7 +95,7 @@ aur_packages() {
   pac -Rdd libxft
   tri -S transset-df nodm-runit apulse adwaita-dark ttf-hack-ligatured xboxdrv-runit \
     libxft-bgra-git ttf-scientifica nitrogen-git maim-git nnn-git sxiv-git slot-git xdotool-git \
-    nodm-dgw \
+    nodm-dgw sxiv-git \
     || return
 }
 

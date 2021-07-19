@@ -82,15 +82,14 @@ base_packages() {
   bs nfs-utils gvim xorg-server nodm git xorg-xinit xorg-xset xterm nitrogen parcellite vi openssh \
     openssh-runit wpa_supplicant dhcpcd picom nnn sxiv qt5ct grub os-prober curl sv-helper\
     noto-fonts noto-fonts-cjk noto-fonts-emoji dunst networkmanager networkmanager-runit maim \
-    man-pages \
+    man-pages adwaita-icon-theme \
     || return
 }
 chaotic_multilib_packages() {
   pac -S powerpill || return
-  pow -S linux-tkg-pds linux-tkg-pds-headers brave lib32-vulkan-radeon vulkan-radeon \
-    vulkan-icd-loader lib32-vulkan-icd-loader steam-native-runtime adwaita-qt \
-    papirus-icon-theme-git bpytop mangohud xboxdrv || return
-  # TODO: replace brave with something non shill that uses up to date chromium
+  pow -S linux-tkg-pds linux-tkg-pds-headers firefox lib32-vulkan-radeon vulkan-radeon \
+    vulkan-icd-loader lib32-vulkan-icd-loader adwaita-qt \
+    mangohud xboxdrv || return
 }
 aur_packages() {
   pac -Rdd libxft
@@ -472,14 +471,14 @@ EOF
   udo 'mkdir -p ~/.config/gtk-2.0'
   udo 'cat > ~/.config/gtk-2.0/gtkrc-2.0' << "EOF"
 gtk-theme-name = "Adwaita-dark"
-gtk-icon-theme-name = "Papirus-Dark"
+gtk-icon-theme-name = "Adwaita"
 EOF
 
   udo 'mkdir -p ~/.config/gtk-3.0'
   udo 'cat > ~/.config/gtk-3.0/settings.ini' << "EOF"
 [Settings]
 gtk-theme-name=Adwaita-dark
-gtk-icon-theme-name=Papirus-Dark
+gtk-icon-theme-name=Adwaita
 EOF
 
   udo 'mkdir -p ~/.cache'
@@ -498,7 +497,7 @@ EOF
 [Appearance]
 color_scheme_path=/usr/share/qt5ct/colors/waves.conf
 custom_palette=false
-icon_theme=Papirus-Dark
+icon_theme=Adwaita
 standard_dialogs=gtk3
 style=Adwaita-Dark
 

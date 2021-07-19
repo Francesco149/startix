@@ -482,7 +482,7 @@ gtk-icon-theme-name=Adwaita
 EOF
 
   udo 'mkdir -p ~/.cache'
-  curl https://reeee.ee/in4q90.png | udo 'cat > ~/.cache/wallpaper.png'
+  curl https://i.imgur.com/DNCB3R5.png | udo 'cat > ~/.cache/wallpaper.png'
   udo 'mkdir -p ~/.config/nitrogen'
   user="$(cr id -un -- 1000)"
   udo 'cat > ~/.config/nitrogen/bg-saved.cfg' << EOF

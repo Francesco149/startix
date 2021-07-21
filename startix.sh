@@ -371,7 +371,7 @@ EOF
 
   udo 'cat > ~/.xinitrc' << "EOF"
 export QT_QPA_PLATFORMTHEME=qt5ct
-export GTK2_RC_FILE="$HOME/.config/gtk-2.0/gtkrc-2.0"
+export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
 export _JAVA_AWT_WM_NONREPARENTING=1 # for ghidra and other shitty java uis
 export MANGOHUD=1
 export EDITOR=vim
@@ -450,14 +450,14 @@ EOF
 
   udo 'mkdir -p ~/.config/gtk-2.0'
   udo 'cat > ~/.config/gtk-2.0/gtkrc-2.0' << "EOF"
-gtk-theme-name = "Adwaita-dark"
+gtk-theme-name = "AdwaitaDark"
 gtk-icon-theme-name = "Adwaita"
 EOF
 
   udo 'mkdir -p ~/.config/gtk-3.0'
   udo 'cat > ~/.config/gtk-3.0/settings.ini' << "EOF"
 [Settings]
-gtk-theme-name=Adwaita-dark
+gtk-theme-name=AdwaitaDark
 gtk-icon-theme-name=Adwaita
 EOF
 
